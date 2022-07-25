@@ -1,0 +1,71 @@
+{
+    "name": "artmin96/filament-password-less",
+    "description": "Password-less for Filament",
+    "keywords": [
+        "ArtMin96",
+        "laravel",
+        "filament-passwordless"
+    ],
+    "homepage": "https://github.com/artmin96/filament-passwordless",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arthur Minasyan",
+            "email": "artminasyanartwork@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1",
+        "filament/filament": "^2.13",
+        "illuminate/contracts": "^8.0|^9.0",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^5.0|^6.0",
+        "nunomaduro/larastan": "^1.0",
+        "orchestra/testbench": "^6.0|^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArtMin96\\FilamentPasswordLess\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArtMin96\\FilamentPasswordLess\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArtMin96\\FilamentPasswordLess\\FilamentPasswordLessServiceProvider"
+            ],
+            "aliases": {
+                "FilamentPasswordless": "FilamentPasswordLess"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
