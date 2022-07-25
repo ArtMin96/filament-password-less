@@ -25,10 +25,13 @@ return [
             'confirm' => [
                 'label' => 'Confirm'
             ],
+            'sign_in' => [
+                'label' => 'Sign in to your existing account'
+            ],
             'resend' => [
                 'help_text' => 'Don\'t receive an email?',
                 'label' => 'Resend passphrase'
-            ]
+            ],
         ],
 
         'messages' => [

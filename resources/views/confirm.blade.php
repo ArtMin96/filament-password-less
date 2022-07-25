@@ -19,4 +19,10 @@
             </a>
         </div>
     @endif
+
+    <div class="text-center">
+        <a href="{{ route('filament.auth.login') }}" class="text-primary-600 hover:text-primary-700">
+            {{ __('filament-password-less::filament-password-less.confirm.buttons.sign_in.label') }}
+        </a>
+    </div>
 </form>
