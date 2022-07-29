@@ -30,7 +30,7 @@ class Confirm extends Component implements HasForms
             redirect()->intended(Filament::getUrl());
         }
 
-        if (!Session::has('email')) {
+        if (! Session::has('email')) {
             redirect()->route('filament.auth.login');
         }
 
