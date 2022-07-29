@@ -55,7 +55,6 @@ class Login extends Component implements HasForms
 
         if (app(FilamentPasswordLess::class)->usesMagicLink()) {
             Session::flash('success', __('filament-password-less::filament-password-less.login.messages.magic_link_sent'));
-            Session::forget('email');
         } else {
             Session::flash('success', __('filament-password-less::filament-password-less.login.messages.passphrase_sent'));
         }
