@@ -4,7 +4,7 @@ use ArtMin96\FilamentPasswordLess\Http\Controllers\MagicLinkController;
 use ArtMin96\FilamentPasswordLess\Http\Middleware\PassPhraseGuard;
 use Illuminate\Support\Facades\Route;
 
-$middleware = array_merge(config("filament.middleware.base"), [PassPhraseGuard::class]);
+$middleware = array_merge(config("filament.middleware.base", []), [PassPhraseGuard::class]);
 
 Route::domain(config("filament.domain"))
     ->middleware($middleware)
